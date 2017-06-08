@@ -1,0 +1,12 @@
+mosquitto_pub -t global/pietro -m hola
+
+mosquitto_sub -t external/#
+
+
+in node0:
+./malaria subscribe -n 10 -N 2 -t external/#
+./malaria subscribe -t external/# -N 2 -n 10  
+
+in ubuntu-vm:
+ ./malaria publish -P 2 -n 10 -H 10.1.1.104 -T 1 -q 0 -t
+ ./malaria publish -H 10.1.1.104 -q 0 -t -T 1 -P 2 -n 10 

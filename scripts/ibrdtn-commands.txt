@@ -1,0 +1,5 @@
+dtnsend dtn://node.h2/testpm neiglist.py 
+dtnrecv dtn://node.h2/testpm
+dtnrecv dtn://node.h2/
+dtnrecv --name test/pm
+

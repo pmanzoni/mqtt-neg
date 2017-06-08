@@ -1,0 +1,5 @@
+cd pmtests/v3-fog/
+./scripts/stop-all-deamons.sh
+mosquitto &
+./scripts/rundtnd-rpi.sh 
+./mqttneg.py

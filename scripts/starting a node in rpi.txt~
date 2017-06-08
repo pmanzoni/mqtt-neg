@@ -1,0 +1,4 @@
+./scripts/stop-all-deamons.sh
+mosquitto &
+./scripts/rundtnd-rpi.sh 
+
